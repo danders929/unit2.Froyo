@@ -5,16 +5,18 @@ const order = prompt(
 
 // Splits user input into an array using comma separated values
 const usrFlavorArray = order.split(",");
-const froyo = {}
+
 
 // adds each flavor into the froyo object
 function count(flavors){
+  const froyo = {}
   for (const flavor of usrFlavorArray){
     // If flavor exists object is increased by 1, if it doesn't value is set to 1
     froyo[flavor] = froyo[flavor] +1 || 1; 
   }
+  return froyo;
 }
-
+const output = count(usrFlavorArray);
 // Executes function using the user input array and displays a table showing the count.
-count(usrFlavorArray);
-console.table(froyo);
+
+console.table(output);
