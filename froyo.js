@@ -16,7 +16,6 @@ function count(flavors){
   }
   return froyo;
 }
-const output = count(usrFlavorArray);
 // Executes function using the user input array and displays a table showing the count.
-
+const output = count(usrFlavorArray);
 console.table(output);
